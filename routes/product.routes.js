@@ -9,4 +9,7 @@ router.post("/update",productController.update)
 router.post("/delete",productController.deleteById)
 router.post("/getById",productController.getById)
 
+//advanced query
+router.post("/getProductWithCategory",productController.getProductWithCategory)
+
 module.exports = router
