@@ -9,7 +9,7 @@ class ProductRepository extends BaseRepository{
 
     async getProductWithCategory(productId){
         try {
-            return await product.findById(productId).populate("categoryId")
+            return await product.findById(productId).populate("categoryId","name -_id")
         } catch (error) {
             console.error("Error fetching product with category:", error);
             return res.status(500).json({ message: "Internal server error" });
